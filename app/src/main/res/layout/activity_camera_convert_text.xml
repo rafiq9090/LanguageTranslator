@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".CameraConvertTextActivity">
+
+
+   <SurfaceView
+       android:id="@+id/camera"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+
+       />
+   <LinearLayout
+       android:id="@+id/subLay"
+       android:layout_width="match_parent"
+       android:padding="5dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="10dp"
+       android:paddingTop="10dp"
+       android:paddingLeft="10dp"
+       android:layout_height="30dp"
+       android:paddingBottom="10dp"
+       android:orientation="horizontal">
+      <ImageView
+          android:src="@drawable/baseline_arrow_back"
+          android:layout_width="45dp"
+          android:id="@+id/idBackBtn"
+          android:layout_weight=".1"
+          android:layout_height="25dp"
+          app:tint="@color/white" />
+      <TextView
+          android:textColor="@color/white"
+          android:textAlignment="center"
+          android:layout_gravity="center"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:layout_weight="1"
+          android:text="Camera Lens"
+          android:layout_marginRight="50dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+   </LinearLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/subLay"
+       android:layout_centerInParent="true">
+
+      <LinearLayout
+          android:id="@+id/llbown"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginEnd="20dp"
+          android:orientation="horizontal"
+          android:padding="10dp">
+
+         <Spinner
+             android:id="@+id/idcFromSpinner"
+             android:layout_width="60dp"
+             android:layout_height="40dp"
+             android:layout_gravity="center"
+             android:layout_margin="3dp"
+             android:layout_weight="1"
+             android:background="@drawable/shape"
+             android:gravity="center"
+             android:padding="10dp"
+
+             />
+
+         <Space
+             android:layout_width="5dp"
+             android:layout_height="wrap_content" />
+
+         <ImageView
+             android:layout_width="5dp"
+             android:layout_height="30dp"
+             android:layout_gravity="center"
+             android:layout_weight=".4"
+             android:src="@drawable/baseline_swap_horiz_24"
+             app:tint="@color/white" />
+
+         <Space
+             android:layout_width="5dp"
+             android:layout_height="wrap_content" />
+
+         <Spinner
+             android:id="@+id/idcToSpinner"
+             android:layout_width="60dp"
+             android:layout_height="40dp"
+             android:layout_gravity="center"
+             android:layout_margin="3dp"
+             android:layout_weight="1"
+             android:background="@drawable/shape"
+             android:gravity="center"
+             android:padding="10dp" />
+
+
+      </LinearLayout>
+
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/llbown"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="30dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginBottom="10dp"
+          android:scrollbars="vertical">
+
+         <TextView
+             android:id="@+id/textView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:background="@android:color/transparent"
+             android:gravity="center"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+             android:textSize="18sp"
+             android:textStyle="bold" />
+      </ScrollView>
+   </RelativeLayout>
+
+
+</RelativeLayout>
